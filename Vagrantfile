@@ -19,17 +19,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = 'ubuntu/trusty64'
 
-  config.vm.synced_folder(
-    '.',
-    '/vagrant',
-    type: 'rsync',
-    rsync__exclude: [
-      '.git/',
-      '.vagrant/',
-      'log/*',
-      'tmp/'
-    ]
-  )
+
 
   config.vm.provision :shell, path: 'config/vagrant/build_dependency_setup.sh'
   config.vm.provision :shell, path: 'config/vagrant/git_setup.sh'
