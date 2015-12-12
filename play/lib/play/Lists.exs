@@ -26,4 +26,6 @@ IO.puts "You can zip lists like Enum.zip [1,2,3], [1,2,3] = #{inspect zipping}"
 
 
 ##you’ll often want to do multiple transformations at once, such as a filter and a map.
-##Elixir has a tool to do just that: the "for comprehension".
+##Elixir has a tool to do just that: the "for comprehension". Comprehension = generator + filter + map
+
+for x <- [1, 2], y <- [3, 4], z <- [5], x + y < 5, do: {x, y, z}
