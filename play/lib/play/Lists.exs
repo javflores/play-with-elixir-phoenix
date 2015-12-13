@@ -29,3 +29,10 @@ IO.puts "You can zip lists like Enum.zip [1,2,3], [1,2,3] = #{inspect zipping}"
 ##Elixir has a tool to do just that: the "for comprehension". Comprehension = generator + filter + map
 
 for x <- [1, 2], y <- [3, 4], z <- [5], x + y < 5, do: {x, y, z}
+
+#Keyword list
+powers = [{:wolverine, [:regeneration, :claws]},
+          {:sway, [:time_control]},
+          {:iceman, [:freeze]}]
+
+IO.inspect Keyword.get powers, :wolverine
